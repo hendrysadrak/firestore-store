@@ -17,7 +17,7 @@
 		"url": "https://github.com/hendrysadrak/firestore-store"
 	},
 	"author": "Hendry Sadrak <hendry.sadrak@outlook.com> (https://www.hendrysadrak.com)",
-	"license": "ISC",
+	"license": "MIT",
 	"peerDependencies": {
 		"firebase-admin": "^5.x.x"
 	},
