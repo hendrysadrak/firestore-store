@@ -4,6 +4,11 @@
 
 Source of this library is written in **ES6** but commonjs exports are used. If you have any problems or questions let me know in [issues](https://github.com/hendrysadrak/firestore-store/issues).
 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Options](#options)
+* [Compatibility](#compatibility)
+* [License](#license)
 
 ## Installation
 
