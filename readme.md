@@ -11,7 +11,7 @@ npm install firebase-admin express-session firestore-store --save
 
 ## Usage
 
-Initialize `firebase-admin` firestore database. 
+Initialize `firebase-admin` firestore database.
 
 ```javascript
 const admin = require( 'firebase-admin' );
@@ -24,12 +24,16 @@ const firebase = admin.initializeApp( {
 const database = firebase.firestore();
 ```
 
+Pass `express-session` to `firestore-store`
+
+```javascript
+const session        = require( 'express-session' );
+const FirestoreStore = require( 'firestore-store' )(session);
+```
+
 Pass database reference to the FirestoreStore.
 
 ```javascript
-const FirestoreStore = require( 'firestore-store' );
-const session        = require( 'express-session' );
-
 express()
   .use( session( {
     store:  new FirestoreStore( {

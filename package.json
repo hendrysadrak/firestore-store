@@ -3,12 +3,6 @@
 	"version": "0.1.3",
 	"description": "Firestore session store for Express.js",
 	"main": "index.js",
-	"directories": {
-		"lib": "lib"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
 	"keywords": [
 		"express.js",
 		"firestore",
@@ -18,7 +12,6 @@
 	"author": "Hendry Sadrak <hendry.sadrak@outlook.com> (https://www.hendrysadrak.com)",
 	"license": "ISC",
 	"peerDependencies": {
-		"express-session": "^1.x.x",
 		"firebase-admin": "^5.x.x"
 	},
 	"engines": {
