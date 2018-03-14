@@ -12,8 +12,10 @@ Source of this library is written in **ES6** but commonjs exports are used. If y
 
 ## Installation
 
+`firebase-admin` is a required peer dependency for `firestore-store`.
+
 ```bash
-npm install firebase-admin express-session firestore-store --save
+npm install firebase-admin firestore-store --save
 ```
 
 ## Usage
