@@ -47,7 +47,7 @@ express()
 const store = new FirestoreStore(options)
 ```
 
-#### options.database (default: 'sessions', required)
+#### options.database (required)
 
 Firestore reference.
 
