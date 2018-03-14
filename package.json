@@ -1,23 +1,33 @@
 {
-  "name": "firestore-store",
-  "version": "0.1.1",
-  "description": "Firestore session store for Express.js",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "express.js",
-    "firestore",
-    "session",
-    "session-store"
-  ],
-  "author": "Hendry Sadrak <hendry.sadrak@outlook.com> (https://www.hendrysadrak.com)",
-  "license": "ISC",
-  "peerDependencies": {
-    "express-session": "^1.x.x"
-  }
+	"name": "firestore-store",
+	"version": "0.1.2",
+	"description": "Firestore session store for Express.js",
+	"main": "index.js",
+	"directories": {
+		"lib": "lib"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"express.js",
+		"firestore",
+		"session",
+		"session-store"
+	],
+	"author": "Hendry Sadrak <hendry.sadrak@outlook.com> (https://www.hendrysadrak.com)",
+	"license": "ISC",
+	"peerDependencies": {
+		"express-session": "^1.x.x",
+		"firebase-admin": "^5.x.x"
+	},
+	"engines": {
+		"node": ">=7.0.0"
+	},
+	"files": [
+		"lib/",
+		"readme.md",
+		"HISTORY.md",
+		"index.js"
+	]
 }
