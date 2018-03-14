@@ -1,6 +1,6 @@
 {
 	"name": "firestore-store",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Firestore session store for Express.js",
 	"main": "index.js",
 	"keywords": [
