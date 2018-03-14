@@ -85,4 +85,4 @@ Currently manualy tested with node.js latest version of 8 & latest version of 9.
 
 ## License
 
-ISC
+MIT License
