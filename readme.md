@@ -83,6 +83,13 @@ Parser used to save or read session info from session document. If you need cust
 Currently manualy tested with node.js latest version of 8 & latest version of 9.
 
 
+## Support
+
+If you have any problems or questions let me know in [issues](https://github.com/hendrysadrak/firestore-store/issues).
+
+If you see it as a useful library drop a star on Github so I know to put more time into it.
+
+
 ## License
 
 MIT License
