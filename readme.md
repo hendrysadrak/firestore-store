@@ -9,6 +9,7 @@ Source of this library is written in **ES6** but commonjs exports are used. If y
 * [Usage](#usage)
 * [Options](#options)
 * [Compatibility](#compatibility)
+* [Support](#support)
 * [License](#license)
 
 
