@@ -85,6 +85,8 @@ This store implements all the required, recommended and optional [methods](https
 
 Currently manualy tested with node.js latest version of 8 & latest version of 9.
 
+I'm currently using this in multiple projects myself.
+
 
 ## Support
 
