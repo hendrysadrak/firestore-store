@@ -22,7 +22,7 @@
 		"firebase-admin": "^5.x.x"
 	},
 	"engines": {
-		"node": ">=7.0.0"
+		"node": ">=6.0.0"
 	},
 	"files": [
 		"lib/",
