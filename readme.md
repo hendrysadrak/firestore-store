@@ -22,7 +22,7 @@ npm install firebase-admin firestore-store --save
 ```
 
 
-## Usage
+## Usage with Express.js
 
 Initialize `firebase-admin` firestore database.
 
