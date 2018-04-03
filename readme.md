@@ -53,7 +53,7 @@ express()
       database: database
     } ),
 
-    secret:            'keyboard cat'
+    secret:            'keyboard cat',
     resave:            true,
     saveUninitialized: true
   } ) );
@@ -78,6 +78,19 @@ Collection name to use for sessions.
 
 Parser used to save or read session info from session document. If you need custom functionality or want to add more properties you can implement such a parser yourself. Check default parser [DocParser](lib/DocParser.js)
 
+```javascript
+class CustomParser {
+	read() { return JSON.parse( doc.session ) }
+
+	// custom save method which also adds date when modified.
+	save() { return {
+		session: JSON.stringify( doc ),
+		dateModified: Date.now()
+	} }
+}
+
+const store = new FirestoreStore({ parser: new CustomParser })
+```
 
 ## Compatibility
 
