@@ -1,1 +1,1 @@
-module.exports = require( './lib/FirestoreStore' );
+module.exports = require( './lib/firestore-store' );

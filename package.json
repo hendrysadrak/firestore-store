@@ -12,6 +12,9 @@
 		"session-store",
 		"store"
 	],
+	"scripts": {
+		"test": "xo"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/hendrysadrak/firestore-store"
@@ -28,6 +31,33 @@
 		"lib/",
 		"readme.md",
 		"HISTORY.md",
+		"LICENSE",
 		"index.js"
-	]
+	],
+	"devDependencies": {
+		"xo": "^0.20.3"
+	},
+	"xo": {
+		"rules": {
+			"space-in-parens": [
+				"error",
+				"always"
+			],
+			"object-curly-spacing": [
+				"error",
+				"always"
+			],
+			"no-multi-spaces": 0,
+			"brace-style": [
+				"error",
+				"stroustrup"
+			],
+			"key-spacing": [
+				"error",
+				{
+					"align": "value"
+				}
+			]
+		}
+	}
 }

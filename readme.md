@@ -76,7 +76,7 @@ Collection name to use for sessions.
 
 #### options.parser (default: DocParser, optional)
 
-Parser used to save or read session info from session document. If you need custom functionality or want to add more properties you can implement such a parser yourself. Check default parser [DocParser](lib/DocParser.js)
+Parser used to save or read session info from session document. If you need custom functionality or want to add more properties you can implement such a parser yourself. Check default parser [DocParser](lib/doc-parser.js)
 
 ```javascript
 class CustomParser {
