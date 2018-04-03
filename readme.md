@@ -6,7 +6,7 @@ Source of this library is written in **ES6** but commonjs exports are used. If y
 
 
 * [Installation](#installation)
-* [Usage](#usage)
+* [Usage](#usage-with-expressjs)
 * [Options](#options)
 * [Compatibility](#compatibility)
 * [Support](#support)
