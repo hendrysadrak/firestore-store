@@ -1,12 +1,12 @@
 # firestore-store
 
-**Firestore session store for Express.js.**
+**Firestore session store for Express.js / Connect.**
 
 Source of this library is written in **ES6** but commonjs exports are used. If you have any problems or questions let me know in [issues](https://github.com/hendrysadrak/firestore-store/issues).
 
 
 * [Installation](#installation)
-* [Usage](#usage-with-expressjs)
+* [Usage](#usage-with-expressjs-connect)
 * [Options](#options)
 * [Compatibility](#compatibility)
 * [Support](#support)
@@ -22,7 +22,7 @@ npm install firebase-admin firestore-store --save
 ```
 
 
-## Usage with Express.js
+## Usage with Express.js / Connect
 
 Initialize `firebase-admin` firestore database.
 
