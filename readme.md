@@ -6,7 +6,7 @@ Source of this library is written in **ES6** but commonjs exports are used. If y
 
 
 * [Installation](#installation)
-* [Usage](#usage-with-expressjs-connect)
+* [Usage](#usage-with-expressjs--connect)
 * [Options](#options)
 * [Compatibility](#compatibility)
 * [Support](#support)
@@ -47,7 +47,7 @@ const FirestoreStore = require( 'firestore-store' )(session);
 Pass database reference to the FirestoreStore.
 
 ```javascript
-express()
+express() // or connect
   .use( session( {
     store:  new FirestoreStore( {
       database: database
