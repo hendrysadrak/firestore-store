@@ -13,7 +13,7 @@
 		"store"
 	],
 	"scripts": {
-		"test": "xo"
+		"test": "xo && ava"
 	},
 	"repository": {
 		"type": "git",
@@ -30,11 +30,13 @@
 	"files": [
 		"lib/",
 		"readme.md",
-		"HISTORY.md",
 		"LICENSE",
 		"index.js"
 	],
 	"devDependencies": {
+		"ava": "^0.25.0",
+		"express-session": "^1.15.6",
+		"firebase-admin": "^5.12.1",
 		"xo": "^0.21.1"
 	},
 	"xo": {

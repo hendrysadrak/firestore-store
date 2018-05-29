@@ -96,7 +96,7 @@ const store = new FirestoreStore({ parser: new CustomParser })
 
 This store implements all the **required, recommended and optional** [methods](https://github.com/expressjs/session#session-store-implementation) of the express-session store.
 
-Currently manualy tested with node.js latest version of 8 & latest version of 9.
+Currently tested with node.js latest version of 8 & latest version of 9.
 
 I'm currently using this in multiple projects myself.
 
