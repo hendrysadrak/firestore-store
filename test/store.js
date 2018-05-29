@@ -1,9 +1,9 @@
+import path from 'path';
 import test from 'ava';
 import session from 'express-session';
 import firestoreStore from '../lib/firestore-store';
-import path from 'path';
 
-// crate firebase session
+// Create firebase session
 
 const admin = require( 'firebase-admin' );
 
@@ -14,44 +14,40 @@ const firebase = admin.initializeApp( {
 
 const database = firebase.firestore();
 
-// create session store
+// Create session store
 
 const FirestoreStore = firestoreStore( session );
 
-const store = new FirestoreStore( {
-	database: database,
-} );
+const store = new FirestoreStore( { database } );
 
-// pre data
+// Pre data
 
 const sessName = `ses${Date.now()}`;
 const sessVal  = { thisissession: true, date: Date.now(), random: Math.random() };
 
-// tests
+// Tests
 
 test.serial.cb( 'store clear before', t => {
-	store.clear( ( err ) => {
+	store.clear( err => {
 		t.is( err, null );
 
 		t.end();
-	} )
+	} );
 } );
 
 test.serial.cb( 'store get, set, touch', t => {
-	store.set( sessName, sessVal, ( err ) => {
+	store.set( sessName, sessVal, err => {
 		t.is( err, null );
 
 		store.get( sessName, ( err, val ) => {
 			t.is( err, null );
 			t.deepEqual( val, sessVal );
 
-			store.touch( sessName, sessVal, ( err ) => {
+			store.touch( sessName, sessVal, err => {
 				t.is( err, null );
 				t.end();
 			} );
-
 		} );
-
 	} );
 } );
 
@@ -61,15 +57,15 @@ test.serial.cb( 'store length before clear', t => {
 		t.is( len, 1 );
 
 		t.end();
-	} )
+	} );
 } );
 
 test.serial.cb( 'store clear', t => {
-	store.clear( ( err ) => {
+	store.clear( err => {
 		t.is( err, null );
 
 		t.end();
-	} )
+	} );
 } );
 
 test.serial.cb( 'store length after clear', t => {
@@ -78,14 +74,14 @@ test.serial.cb( 'store length after clear', t => {
 		t.is( len, 0 );
 
 		t.end();
-	} )
+	} );
 } );
 
 test.serial.cb( 'store destory', t => {
-	store.set( sessName, sessVal, ( err ) => {
+	store.set( sessName, sessVal, err => {
 		t.is( err, null );
 
-		store.destroy( sessName, ( err ) => {
+		store.destroy( sessName, err => {
 			t.is( err, null );
 
 			store.length( ( err, len ) => {
@@ -93,9 +89,7 @@ test.serial.cb( 'store destory', t => {
 				t.is( len, 0 );
 
 				t.end();
-			} )
-
+			} );
 		} );
-
 	} );
 } );

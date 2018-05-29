@@ -1,7 +1,6 @@
 import test from 'ava';
 import DocParser from '../lib/doc-parser';
 
-
 test( 'default parser save', t => {
 	const content = DocParser.save( { hello: 'world', content: 'yay' } );
 
