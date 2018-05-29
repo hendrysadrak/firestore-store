@@ -6,6 +6,6 @@ node_js:
 - '9'
 before_install:
 - openssl aes-256-cbc -K $encrypted_91c6012413a9_key -iv $encrypted_91c6012413a9_iv
-  -in testServiceAccountCredentials.json.enc -out testServiceAccountCredentials.json
+  -in test/testServiceAccountCredentials.json.enc -out test/testServiceAccountCredentials.json
   -d
 - npm i -g npm
