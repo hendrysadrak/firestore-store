@@ -1,4 +1,4 @@
-# firestore-store
+# firestore-store   [![Build Status](https://travis-ci.org/hendrysadrak/firestore-store.svg?branch=master)](https://travis-ci.org/hendrysadrak/firestore-store)
 
 **Firestore session store for Express.js / Connect.**
 
