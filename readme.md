@@ -82,7 +82,7 @@ Parser used to save or read session info from session document. If you need cust
 ```javascript
 const parser = {
   read() {  
-	  return JSON.parse(doc.session);
+    return JSON.parse(doc.session);
   },
 
   // custom save method which also adds date when modified.
