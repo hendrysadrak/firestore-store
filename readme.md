@@ -113,6 +113,7 @@ If you have any problems or questions let me know in [issues](https://github.com
 
 If you see it as a useful library star :star: it on [Github](https://github.com/hendrysadrak/firestore-store) so I know to put more time into supporting it.
 
+TravisCI page https://travis-ci.org/hendrysadrak/firestore-store
 
 ## License
 
