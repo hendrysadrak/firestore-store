@@ -9,6 +9,7 @@ Source of this library is written in **ES6** but commonjs exports are used. If y
 * [Usage](#usage-with-expressjs--connect)
 * [Options](#options)
 * [Compatibility](#compatibility)
+* [Changelog](https://github.com/hendrysadrak/firestore-store/releases)
 * [Support](#support)
 * [License](#license)
 
