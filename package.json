@@ -4,6 +4,7 @@
 	"description": "Firestore session store for Express.js",
 	"main": "lib/firestore-store.js",
 	"keywords": [
+		"connect",
 		"express",
 		"express.js",
 		"firestore",
@@ -13,13 +14,13 @@
 		"store"
 	],
 	"scripts": {
-		"test": "xo && ava"
+		"test": "ava"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/hendrysadrak/firestore-store"
 	},
-	"author": "Hendry Sadrak <hendry.sadrak@outlook.com> (https://www.hendrysadrak.com)",
+	"author": "Hendry Sadrak (https://www.hendrysadrak.com)",
 	"license": "MIT",
 	"peerDependencies": {
 		"firebase-admin": "^5.x.x"
@@ -36,30 +37,6 @@
 	"devDependencies": {
 		"ava": "^0.25.0",
 		"express-session": "^1.15.6",
-		"firebase-admin": "^5.12.1",
-		"xo": "^0.21.1"
-	},
-	"xo": {
-		"rules": {
-			"space-in-parens": [
-				"error",
-				"always"
-			],
-			"object-curly-spacing": [
-				"error",
-				"always"
-			],
-			"no-multi-spaces": 0,
-			"brace-style": [
-				"error",
-				"stroustrup"
-			],
-			"key-spacing": [
-				"error",
-				{
-					"align": "value"
-				}
-			]
-		}
+		"firebase-admin": "^5.13.1"
 	}
 }
