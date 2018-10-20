@@ -77,7 +77,7 @@ Collection name to use for sessions.
 
 #### options.parser (default: DocParser, optional)
 
-Parser used to save or read session info from session document. If you need custom functionality or want to add more properties you can implement such a parser yourself. Check default parser [DocParser](lib/doc-parser.js)
+Parser used to save or read session info from session document. If you need custom functionality or want to add more properties you can implement such a parser yourself. Required is to have `read` and `save` methods. Check default parser [DocParser](lib/doc-parser.js)
 
 ```javascript
 const parser = {
@@ -110,7 +110,7 @@ I'm currently using this in multiple projects myself.
 
 If you have any problems or questions let me know in [issues](https://github.com/hendrysadrak/firestore-store/issues).
 
-If you see it as a useful library drop a star on Github so I know to put more time into it.
+If you see it as a useful library star :star: it on [Github](https://github.com/hendrysadrak/firestore-store) so I know to put more time into supporting it.
 
 
 ## License
