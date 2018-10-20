@@ -10,6 +10,7 @@ Source of this library is written in **ES6** but commonjs exports are used. If y
 * [Options](#options)
 * [Compatibility](#compatibility)
 * [Changelog](https://github.com/hendrysadrak/firestore-store/releases)
+* [Examples](/examples)
 * [Support](#support)
 * [License](#license)
 
