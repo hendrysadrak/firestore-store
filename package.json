@@ -23,9 +23,6 @@
 	},
 	"author": "Hendry Sadrak (https://www.hendrysadrak.com)",
 	"license": "MIT",
-	"peerDependencies": {
-		"firebase-admin": "^5.x.x"
-	},
 	"engines": {
 		"node": ">=6.0.0"
 	},
@@ -36,9 +33,10 @@
 		"index.js"
 	],
 	"devDependencies": {
-		"ava": "^0.25.0",
+		"@google-cloud/firestore": "^0.19.0",
+		"ava": "^1.0.1",
 		"express-session": "^1.15.6",
-		"firebase-admin": "^5.13.1",
-		"np": "*"
+		"firebase-admin": "^6.4.0",
+		"np": "^3.1.0"
 	}
 }
