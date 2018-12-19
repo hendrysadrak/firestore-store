@@ -33,7 +33,6 @@
 		"index.js"
 	],
 	"devDependencies": {
-		"@google-cloud/firestore": "^0.19.0",
 		"ava": "^1.0.1",
 		"express-session": "^1.15.6",
 		"firebase-admin": "^6.4.0",
