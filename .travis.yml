@@ -3,6 +3,7 @@ language: node_js
 node_js:
 - '8'
 - '10'
+- '12'
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_91c6012413a9_key -iv $encrypted_91c6012413a9_iv
