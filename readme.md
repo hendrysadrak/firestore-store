@@ -104,9 +104,6 @@ This store implements all the **required, recommended and optional** [methods](h
 
 Currently tested with node.js version ~6~, 8, 10, 12. Travis is used for running tests https://travis-ci.org/hendrysadrak/firestore-store
 
-I'm currently using this in multiple projects myself.
-
-
 ## Support
 
 If you have any problems or questions let me know in [issues](https://github.com/hendrysadrak/firestore-store/issues).
