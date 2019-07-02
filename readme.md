@@ -61,6 +61,26 @@ express() // or connect
   } ) );
 ```
 
+## Usage in Cloud Functions or Cloud Run
+
+When using Firebase Hosting together with Cloud Functions or Cloud Run, cookies are stripped from incoming requests. This would normally prevent the session lookup mechanism from working. However, when using `__session` as the name, the value will be passed through to the app.
+
+```javascript
+express() // or connect
+  .use( session( {
+    store:  new FirestoreStore( {
+      database: database
+    } ),
+
+    name:              '__session', // ← required for Cloud Functions / Cloud Run
+    secret:            'keyboard cat',
+    resave:            true,
+    saveUninitialized: true
+  } ) );
+```
+
+Refer to [Using Cookies in the Firebase Documentation on Caching](https://firebase.google.com/docs/hosting/manage-cache#using_cookies)
+
 
 ## Options
 
