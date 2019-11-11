@@ -34,8 +34,8 @@
 	],
 	"devDependencies": {
 		"ava": "^1.4.1",
-		"express-session": "^1.16.1",
+		"express-session": "^1.17.0",
 		"firebase-admin": "^7.4.0",
-		"np": "^5.0.2"
+		"np": "^5.1.3"
 	}
 }
