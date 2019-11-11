@@ -15,7 +15,7 @@
 	],
 	"scripts": {
 		"test": "ava",
-		"release": "np"
+		"release": "npx np"
 	},
 	"repository": {
 		"type": "git",
@@ -35,7 +35,6 @@
 	"devDependencies": {
 		"ava": "^1.4.1",
 		"express-session": "^1.17.0",
-		"firebase-admin": "^7.4.0",
-		"np": "^5.1.3"
+		"firebase-admin": "^7.4.0"
 	}
 }
