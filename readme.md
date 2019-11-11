@@ -122,7 +122,7 @@ const store = new FirestoreStore({ parser });
 
 This store implements all the **required, recommended and optional** [methods](https://github.com/expressjs/session#session-store-implementation) of the express-session store.
 
-Currently tested with node.js version ~6~, 8, 10, 12. Travis is used for running tests https://travis-ci.org/hendrysadrak/firestore-store
+Currently tested with node.js version ~6~, 8, 10, 12, 13. Travis is used for running tests https://travis-ci.org/hendrysadrak/firestore-store
 
 ## Support
 
