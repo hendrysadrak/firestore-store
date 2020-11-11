@@ -100,18 +100,37 @@ Collection name to use for sessions.
 
 Parser used to save or read session info from session document. If you need custom functionality or want to add more properties you can implement such a parser yourself. Required is to have `read` and `save` methods. Check default parser [DocParser](lib/doc-parser.js)
 
+##### Example of a custom parser adding `dateModified` field:
+
 ```javascript
 const parser = {
 	read(doc) {
 		return JSON.parse(doc.session);
 	},
 
-	// custom save method which also adds date when modified.
 	save(doc) {
 		return {
 			session: JSON.stringify(doc),
 			dateModified: Date.now(),
 		};
+	},
+};
+
+const store = new FirestoreStore({ parser });
+```
+
+##### Example of a custom parser storing the session in the firestore without stringifying:
+
+> https://github.com/hendrysadrak/firestore-store/issues/57#issue-718419725
+
+```javascript
+const parser = {
+	read(doc) {
+		return doc;
+	},
+
+	save(doc) {
+		return JSON.parse(JSON.stringify(doc));
 	},
 };
 
