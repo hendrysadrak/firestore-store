@@ -1,19 +1,17 @@
-# firestore-store   [![Build Status](https://travis-ci.org/hendrysadrak/firestore-store.svg?branch=master)](https://travis-ci.org/hendrysadrak/firestore-store)
+# firestore-store [![Build Status](https://travis-ci.org/hendrysadrak/firestore-store.svg?branch=master)](https://travis-ci.org/hendrysadrak/firestore-store)
 
 **Firestore session store for Express.js / Connect.**
 
 Source of this library is written in **ES6** but commonjs exports are used. If you have any problems or questions let me know in [issues](https://github.com/hendrysadrak/firestore-store/issues).
 
-
-* [Installation](#installation)
-* [Usage](#usage-with-expressjs--connect)
-* [Options](#options)
-* [Compatibility](#compatibility)
-* [Changelog](https://github.com/hendrysadrak/firestore-store/releases)
-* [Examples](/examples)
-* [Support](#support)
-* [License](#license)
-
+- [Installation](#installation)
+- [Usage](#usage-with-expressjs--connect)
+- [Options](#options)
+- [Compatibility](#compatibility)
+- [Changelog](https://github.com/hendrysadrak/firestore-store/releases)
+- [Examples](/examples)
+- [Support](#support)
+- [License](#license)
 
 ## Installation
 
@@ -23,18 +21,17 @@ Source of this library is written in **ES6** but commonjs exports are used. If y
 npm install firebase-admin firestore-store --save
 ```
 
-
 ## Usage with Express.js / Connect
 
 Initialize `firebase-admin` firestore database.
 
 ```javascript
-const admin = require( 'firebase-admin' );
+const admin = require("firebase-admin");
 
-const firebase = admin.initializeApp( {
-  credential:  admin.credential.cert( 'path/to/serviceAccountCredentials.json' ),
-  databaseURL: 'https://<DATABASE_URL>.firebaseio.com'
-} );
+const firebase = admin.initializeApp({
+	credential: admin.credential.cert("path/to/serviceAccountCredentials.json"),
+	databaseURL: "https://<DATABASE_URL>.firebaseio.com",
+});
 
 const database = firebase.firestore();
 ```
@@ -42,23 +39,25 @@ const database = firebase.firestore();
 Pass `express-session` to `firestore-store`
 
 ```javascript
-const session        = require( 'express-session' );
-const FirestoreStore = require( 'firestore-store' )(session);
+const session = require("express-session");
+const FirestoreStore = require("firestore-store")(session);
 ```
 
 Pass database reference to the FirestoreStore.
 
 ```javascript
 express() // or connect
-  .use( session( {
-    store:  new FirestoreStore( {
-      database: database
-    } ),
+	.use(
+		session({
+			store: new FirestoreStore({
+				database: database,
+			}),
 
-    secret:            'keyboard cat',
-    resave:            true,
-    saveUninitialized: true
-  } ) );
+			secret: "keyboard cat",
+			resave: true,
+			saveUninitialized: true,
+		})
+	);
 ```
 
 ## Usage in Cloud Functions or Cloud Run
@@ -67,25 +66,26 @@ When using Firebase Hosting together with Cloud Functions or Cloud Run, cookies 
 
 ```javascript
 express() // or connect
-  .use( session( {
-    store:  new FirestoreStore( {
-      database: database
-    } ),
+	.use(
+		session({
+			store: new FirestoreStore({
+				database: database,
+			}),
 
-    name:              '__session', // ← required for Cloud Functions / Cloud Run
-    secret:            'keyboard cat',
-    resave:            true,
-    saveUninitialized: true
-  } ) );
+			name: "__session", // ← required for Cloud Functions / Cloud Run
+			secret: "keyboard cat",
+			resave: true,
+			saveUninitialized: true,
+		})
+	);
 ```
 
 Refer to [Using Cookies in the Firebase Documentation on Caching](https://firebase.google.com/docs/hosting/manage-cache#using_cookies)
 
-
 ## Options
 
 ```javascript
-const store = new FirestoreStore(options)
+const store = new FirestoreStore(options);
 ```
 
 #### options.database (required)
@@ -102,17 +102,17 @@ Parser used to save or read session info from session document. If you need cust
 
 ```javascript
 const parser = {
-  read(doc) {  
-    return JSON.parse(doc.session);
-  },
+	read(doc) {
+		return JSON.parse(doc.session);
+	},
 
-  // custom save method which also adds date when modified.
-  save(doc) {
-    return {
-      session: JSON.stringify(doc),
-      dateModified: Date.now()
-    };
-  }
+	// custom save method which also adds date when modified.
+	save(doc) {
+		return {
+			session: JSON.stringify(doc),
+			dateModified: Date.now(),
+		};
+	},
 };
 
 const store = new FirestoreStore({ parser });
@@ -122,7 +122,7 @@ const store = new FirestoreStore({ parser });
 
 This store implements all the **required, recommended and optional** [methods](https://github.com/expressjs/session#session-store-implementation) of the express-session store.
 
-Currently tested with node.js version ~6~, 8, 10, 12, 13. Travis is used for running tests https://travis-ci.org/hendrysadrak/firestore-store
+Currently tested with node.js version ~6~, 8, 10, 12, 14. Travis is used for running tests https://travis-ci.org/hendrysadrak/firestore-store
 
 ## Support
 
