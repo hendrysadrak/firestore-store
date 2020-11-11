@@ -29,8 +29,7 @@
 	"files": [
 		"lib/",
 		"readme.md",
-		"LICENSE",
-		"index.js"
+		"LICENSE"
 	],
 	"devDependencies": {
 		"ava": "^2.4.0",
